@@ -46,7 +46,7 @@
 					di nascita:</label>
 				<div class="col-sm-2">
 					<input type="text" class="form-control" name="dateOfBirth"
-						placeholder="GG/MM/AA" required>
+						placeholder="GG/MM/AA" required> ${dataError}
 				</div>
 			</div>
 			<div class="form-group">

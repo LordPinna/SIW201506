@@ -2,6 +2,7 @@ package it.siw.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +28,7 @@ public class Provider {
 
 	private String phoneNumber;
 
-	@OneToOne
+	@OneToOne (cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	private Address address;
 
 	@ManyToMany

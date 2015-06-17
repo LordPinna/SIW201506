@@ -32,7 +32,8 @@ public class AddCustomer implements Action {
 		try {
 			dateofBirth = format.parse(dateOfBirths);
 		} catch (ParseException e) {
-			e.printStackTrace();
+			request.setAttribute("dataError", "Inserisci una data valida");
+			return "/newCustomer.jsp";
 		}
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.setTime(dateofBirth);

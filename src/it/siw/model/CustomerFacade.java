@@ -27,7 +27,6 @@ public class CustomerFacade {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(customer);
-		em.persist(address);
 		tx.commit();
 		em.close();
 		emf.close();

@@ -3,6 +3,7 @@ package it.siw.model;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,7 +39,7 @@ public class Customer {
 	@Temporal (TemporalType.DATE)
 	private GregorianCalendar dateOfBirth;
 
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	private Address address;
 
 	@OneToMany(mappedBy = "customer")
