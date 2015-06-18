@@ -19,13 +19,13 @@ Attore primario: cliente (utente registrato)
 Scenario principale di successo: 
 Il cliente crea un ordine
 Il cliente consulta il catalogo dei prodotti
-Il cliente sceglie un prodotto e aggiunge codice e quantità del prodotto scelto all'ordine
+Il cliente sceglie un prodotto e aggiunge codice e quantitÃ  del prodotto scelto all'ordine
 Il sistema imposta il prezzo unitario del prodotto scelto al prezzo corrente di listino
 Il sistema registra la riga ordine
-Il cliente ripete i due passi precedenti finché necessario
+Il cliente ripete i due passi precedenti finchÃ© necessario
 Il cliente "chiude" l'ordine
 Il sistema registra l'ordine
-Precondizioni: il cliente è identificato e autenticato
+Precondizioni: il cliente Ã¨ identificato e autenticato
 
 ----------------Caso d'uso UC4: consulta i propri ordini----------------
 Attore primario: cliente
@@ -34,10 +34,19 @@ Il cliente consulta l'elenco dei propri ordini
 Il sistema mostra al cliente l'elenco dei suoi ordini
 Il cliente chiede il dettaglio di un ordine
 Il sistema mostra il dettaglio dell'ordine
-Il cliente ripete i due passi precedenti finché necessario
-Precondizioni: il cliente è identificato e autenticato
+Il cliente ripete i due passi precedenti finchÃ© necessario
+Precondizioni: il cliente Ã¨ identificato e autenticato
 
-----------------Caso d'uso UC5: annulla ordine----------------
+----------------Caso d'uso UC5: recupera ordine lasciato aperto----------------
+Attore primario: cliente
+Scenario principale:
+Il cliente consulta l'elenco dei propri ordini
+Il sistema mostra al cliente l'elenco dei suoi ordini
+Il cliente chiede il dettaglio di un ordine non ancora chiuso
+Il sistema carica l'ordine e mostra il catalogo dei prodotti con il dettaglio dell'ordine
+Precondizioni: il cliente Ã¨ identificato e autenticato
+
+----------------Caso d'uso UC6: annulla ordine----------------
 Attore primario: cliente
 Scenario principale:
 Il cliente consulta l'elenco dei propri ordini
@@ -46,20 +55,20 @@ Il cliente chiede il dettaglio di un ordine
 Il sistema mostra il dettaglio dell'ordine
 Il cliente annulla l'ordine
 Il sistema cancella l'ordine
-Precondizioni: il cliente è identificato e autenticato
+Precondizioni: il cliente Ã¨ identificato e autenticato
 
-----------------Caso d'uso UC6: inserimento prodotti nel catalogo----------------
+----------------Caso d'uso UC7: inserimento prodotti nel catalogo----------------
 Attore primario: amministrazione
 Scenario principale:
 L'amministratore inserisce un nuovo prodotto nel catalogo specificandone i dettagli
 Il sistema registra il prodotto
 I punti precedenti vengono ripetuti fino a che necessario
-Precondizioni: l'amministratore è identificato e autenticato
+Precondizioni: l'amministratore Ã¨ identificato e autenticato
 
-----------------Caso d'uso UC7: recupera indirizzo cliente----------------
+----------------Caso d'uso UC8: recupera indirizzo cliente----------------
 Attore primario: amministrazione
 Scenario principale:
-L’amministratore fornisce consulta la lista degli ordini chiusi
-L’amministratore richiede i dettagli di un'ordine
-Il sistema mostra all’amministratore i dati dell'ordine e i dati del cliente che ha effettuato l’ordine
-Precondizioni: l’amministratore è identificato e autenticato
+Lâ€™amministratore fornisce consulta la lista degli ordini chiusi
+Lâ€™amministratore richiede i dettagli di un'ordine
+Il sistema mostra allâ€™amministratore i dati dell'ordine e i dati del cliente che ha effettuato lâ€™ordine
+Precondizioni: lâ€™amministratore Ã¨ identificato e autenticato
